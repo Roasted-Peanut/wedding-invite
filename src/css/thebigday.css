@@ -1,0 +1,140 @@
+.thebigday {
+  /* background: url('/images/bg-wedding.jpg') center/cover no-repeat; */
+  padding: 40px;
+}
+.thebigday-container {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  /* background: rgba(255, 192, 203, 0.8); */
+  backdrop-filter: blur(6px);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.thebigday-left,
+.thebigday-right {
+  flex: 1;
+  text-align: center;
+}
+
+.save {
+  font-size: 60px;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.the {
+  display: block;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.date {
+  font-size: 60px;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.decor-leaf {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.names {
+  font-size: 28px;
+  color: white;
+  margin: 0 0 10px;
+}
+
+.message {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.thebigday-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thebigday-buttons button {
+  flex: 1; /* Chia đều width */
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+/* Hover chung */
+.thebigday-buttons button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Nếu muốn phân biệt màu hoặc border giữa 2 nút */
+.btn-primary {
+  border-color: white;
+}
+
+.btn-secondary {
+  border-color: white;
+}
+
+.date-text {
+  font-size: 20px;
+  color: white;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.countdown div {
+  color: white;
+  text-align: center;
+}
+
+.countdown span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.countdown small {
+  display: block;
+  font-size: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .thebigday-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .save,
+  .date {
+    font-size: 40px;
+  }
+
+  .names {
+    font-size: 22px;
+  }
+}

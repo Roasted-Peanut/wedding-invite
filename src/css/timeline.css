@@ -1,0 +1,57 @@
+.timeline {
+  width: 100%;
+  /* background-color: #fafafa; */
+  padding: 0; /* chỉ padding cho khoảng cách trên/dưới và chút xíu 2 bên */
+  text-align: center;
+  margin: 0;
+}
+
+.timeline-inner {
+  width: 100%; /* bỏ max-width */
+  margin: 0;
+  padding: 0; /* bỏ padding ngang */
+}
+
+.timeline-title {
+  font-size: 28px;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+}
+
+.timeline-text {
+  max-width: 800px; /* giới hạn chiều rộng trên PC */
+  margin: 0 auto; /* căn giữa khối */
+  text-align: center; /* căn giữa chữ */
+}
+
+@media (max-width: 768px) {
+  .timeline-text {
+    max-width: 100%; /* mobile vẫn full width */
+    padding: 0 12px; /* chừa khoảng 2 bên để không dính mép */
+  }
+}
+
+.timeline-names {
+  font-size: 25px;
+  /* font-weight: 600; */
+  /* margin-bottom: 30px; */
+  color: var(--accent);
+
+}
+
+.timeline-parents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 16px;
+  max-width: 500px; /* giới hạn chiều rộng */
+  margin: 0 auto; /* căn giữa */
+  font-family: "emoji";
+}
+
+@media (max-width: 600px) {
+  .timeline-parents {
+    gap: 6px;
+    font-size: 14px; /* thu nhỏ để vừa màn hình */
+  }
+}

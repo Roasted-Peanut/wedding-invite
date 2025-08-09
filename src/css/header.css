@@ -1,0 +1,20 @@
+.invitation {
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(215, 210, 210, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  align-content: center;
+}
+.headerView {
+}
+.clickButton:active {
+  transform: scale(0.95); /* thu nhỏ nhẹ khi nhấn */
+  background-color: #f0f0f0; /* đổi màu khi nhấn */
+}
+@media (max-width: 500px) {
+  h1 {
+    flex-direction: column; /* chuyển từ ngang sang dọc */
+    gap: 0;
+  }
+}
