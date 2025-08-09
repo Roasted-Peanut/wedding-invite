@@ -3,7 +3,7 @@
   --card-w: 320px; /* giới hạn chiều rộng cột */
   --media-h: 220px; /* chiều cao ảnh */
   --accent: #f56b6b;
-  --gap: 16px;
+  --gap: 20px;
 }
 
 .intro {
@@ -11,14 +11,14 @@
   gap: var(--gap);
   justify-content: center;
   align-items: flex-start;
-  padding: 16px;
+  padding: 20px;
   flex-wrap: wrap; /* để màn nhỏ thì xuống hàng */
 }
 
 .intro-col {
   flex: 1;
   max-width: var(--card-w);
-  border-radius: 14px;
+  border-radius: 18px;
   border: 1px solid #e8e8e8;
   background: #fff;
   overflow: hidden;
@@ -90,7 +90,7 @@
 .media-overlay p {
   margin: 0;
   color: #444;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.4;
   max-width: 90%;
 }

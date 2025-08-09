@@ -28,7 +28,7 @@
 
 .the {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   letter-spacing: 2px;
 }
@@ -52,7 +52,7 @@
 }
 
 .message {
-  font-size: 14px;
+  font-size: 18px;
   color: white;
   margin-bottom: 20px;
 }
@@ -73,7 +73,7 @@
   background: transparent;
   color: white;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   transition: all 0.3s ease;
   width: 200px;
 }
@@ -82,7 +82,7 @@
 .thebigday-buttons button:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.3);
 }
 
 /* Nếu muốn phân biệt màu hoặc border giữa 2 nút */
@@ -119,7 +119,7 @@
 
 .countdown small {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Mobile */

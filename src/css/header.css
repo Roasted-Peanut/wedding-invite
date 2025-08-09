@@ -1,8 +1,8 @@
 .invitation {
   margin: 0 auto;
   padding: 2rem;
-  box-shadow: 0 2px 12px rgba(215, 210, 210, 0.1);
-  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(215, 210, 210, 0.1);
+  border-radius: 14px;
   text-align: center;
   align-content: center;
 }
