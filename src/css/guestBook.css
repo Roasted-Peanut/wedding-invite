@@ -1,0 +1,84 @@
+.guestbook-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fffafc url('https://www.transparenttextures.com/patterns/white-diamond.png');
+  border: 4px double #f9c5d1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Dancing Script', cursive;
+}
+
+.guestbook-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #d6336c;
+}
+
+.guestbook-divider {
+  width: 80px;
+  height: 2px;
+  background: #f9c5d1;
+  margin: 0.5rem auto 1.5rem;
+}
+
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #f4a3b5;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  resize: vertical;
+}
+
+.guestbook-form button {
+  background: #f9c5d1;
+  color: #d6336c;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.guestbook-form button:hover {
+  background: #f4a3b5;
+}
+
+.guestbook-messages {
+  margin-top: 1.5rem;
+}
+
+.guestbook-message {
+  background: #fff0f4;
+  padding: 1rem;
+  border-left: 4px solid #f4a3b5;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.guestbook-name {
+  color: #d6336c;
+  font-weight: bold;
+}
+
+.guestbook-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.guestbook-error {
+  color: red;
+  font-size: 0.9rem;
+}
