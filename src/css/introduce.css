@@ -11,7 +11,7 @@
   gap: var(--gap);
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  /* padding: 20px; */
   flex-wrap: wrap; /* để màn nhỏ thì xuống hàng */
 }
 

@@ -5,7 +5,7 @@ const GiftBox = () => {
     <div className="giftbox-container">
       <h2 className="giftbox-title">🎁 Hộp mừng cưới</h2>
       <p className="giftbox-description">
-        Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nha ^^.
+        Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nha 🫶.
         <br />
         Cảm ơn bạn rất nhiều!
       </p>
@@ -18,7 +18,7 @@ const GiftBox = () => {
           <p><strong>Tên:</strong> Chú Rể</p>
           <p><strong>STK:</strong> 12349854060</p>
           <img
-            src="https://qrcode-gen.com/images/qrcode-default.png"
+            src='src/assets/QRcode.jpg'
             alt="QR Chú rể"
             className="giftbox-qr"
           />

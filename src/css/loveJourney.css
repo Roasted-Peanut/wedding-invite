@@ -1,18 +1,19 @@
 .love-journey {
-  /* padding: 40px 20px; */
-  max-width: 1000px; /* Cùng width với thebigday */
+  max-width: 1000px;
   margin: auto;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('../assets/history.jpg');
 }
 
 .love-title {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 40px;
-  color: white;
+  margin: 16px 0;
 }
 
-.timeline {
+.timeline-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -34,8 +35,8 @@
 
 .timeline-image img {
   width: 100%;
-  max-width: 500px; /* ảnh không vượt quá kích thước này */
-  aspect-ratio: 4 / 3; /* tỉ lệ ảnh để đồng đều */
+  /* max-width: 500px; */
+  aspect-ratio: 4 / 3;
   object-fit: cover;   /* cắt ảnh vừa khung nhưng không méo */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);

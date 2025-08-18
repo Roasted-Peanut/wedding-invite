@@ -1,140 +1,136 @@
 .thebigday {
-  /* background: url('/images/bg-wedding.jpg') center/cover no-repeat; */
-  padding: 40px 40px 0 40px;
+  text-align: center;
 }
+
 .thebigday-container {
-  display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  padding: 40px;
-  /* background: rgba(255, 192, 203, 0.8); */
-  backdrop-filter: blur(6px);
   max-width: 1000px;
   margin: auto;
 }
 
-.thebigday-left,
-.thebigday-right {
-  flex: 1;
-  text-align: center;
+.countdown-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-.save {
-  font-size: 60px;
-  margin: 0;
+.thebigday-col {
+  border-radius: 16px;
+  box-shadow: #be82a1 0px 4px 12px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.thebigday-title {
+  font-size: 24px;
   font-weight: bold;
-  color: white;
-}
-
-.the {
-  display: block;
-  font-size: 20px;
-  color: white;
-  letter-spacing: 2px;
-}
-
-.date {
-  font-size: 60px;
   margin: 0;
-  color: white;
-  font-weight: bold;
-}
-
-.decor-leaf {
-  font-size: 30px;
-  margin-top: 10px;
-}
-
-.names {
-  font-size: 28px;
-  color: white;
-  margin: 0 0 10px;
-}
-
-.message {
-  font-size: 18px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.thebigday-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.thebigday-buttons button {
-  flex: 1; /* Chia đều width */
-  padding: 10px 20px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  width: 200px;
-}
-
-/* Hover chung */
-.thebigday-buttons button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.3);
-}
-
-/* Nếu muốn phân biệt màu hoặc border giữa 2 nút */
-.btn-primary {
-  border-color: white;
-}
-
-.btn-secondary {
-  border-color: white;
 }
 
 .date-text {
-  font-size: 20px;
-  color: white;
-  margin: 20px 0;
-  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .countdown div {
-  color: white;
   text-align: center;
 }
 
 .countdown span {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
+  display: block;
 }
 
 .countdown small {
-  display: block;
-  font-size: 14px;
+  font-size: 13px;
+  color: #666;
 }
 
-/* Mobile */
+.expired {
+  font-size: 18px;
+  color: red;
+}
+
+.thebigday-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-width: 0;
+}
+
+.thebigday-buttons button {
+  /* flex: 1; */
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  max-width: 200px;
+  border-width: 0;
+  box-shadow: #be82a1 0px 2px 10px;
+  border-radius: 8px;
+}
+
+/* Hover chung */
+.thebigday-buttons button:hover {
+  background: #d1a1ba;
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Nếu muốn phân biệt màu hoặc border giữa 2 nút */
+.btn-primary {
+
+}
+
+.btn-secondary {
+}
+
+.event-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.event-col {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.event-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.event-time {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.event-address {
+  margin-bottom: 12px;
+}
+
+.event-map iframe {
+  border-radius: 12px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .thebigday-container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .save,
-  .date {
-    font-size: 40px;
-  }
-
-  .names {
-    font-size: 22px;
+  .countdown-wrapper,
+  .event-container {
+    grid-template-columns: 1fr;
   }
 }

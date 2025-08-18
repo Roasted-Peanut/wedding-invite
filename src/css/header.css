@@ -1,12 +1,8 @@
-.invitation {
-  margin: 0 auto;
-  padding: 2rem;
+
+.headerView {
   box-shadow: 0 2px 14px rgba(215, 210, 210, 0.1);
-  border-radius: 14px;
   text-align: center;
   align-content: center;
-}
-.headerView {
 }
 .clickButton:active {
   transform: scale(0.95); /* thu nhỏ nhẹ khi nhấn */

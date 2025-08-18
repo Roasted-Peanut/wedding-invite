@@ -1,9 +1,8 @@
 .timeline {
   width: 100%;
-  /* background-color: #fafafa; */
-  padding: 0; /* chỉ padding cho khoảng cách trên/dưới và chút xíu 2 bên */
   text-align: center;
-  margin: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .timeline-inner {
@@ -15,7 +14,7 @@
 .timeline-title {
   font-size: 28px;
   font-weight: bold;
-  /* margin-bottom: 20px; */
+  margin: 0;
 }
 
 .timeline-text {
@@ -33,10 +32,10 @@
 
 .timeline-names {
   font-size: 25px;
-  /* font-weight: 600; */
-  /* margin-bottom: 30px; */
-  color: var(--accent);
-
+  color: #e87a90;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .timeline-parents {
@@ -44,8 +43,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   font-size: 20px;
-  max-width: 500px; /* giới hạn chiều rộng */
-  margin: 0 auto; /* căn giữa */
   font-family: "emoji";
 }
 

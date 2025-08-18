@@ -8,13 +8,11 @@ import "./css/introduce.css";
 import "./css/thebigday.css";
 import "./css/timeline.css";
 import "./css/index.css";
-import "./css/event.css";
 import "./css/loveJourney.css";
 import "./css/weddingSlider.css";
 import "./css/guestBook.css";
 import "./css/giftBox.css";
 
-import EventMap from "./component/event";
 import LoveJourney from "./component/LoveJourney";
 import WeddingSlider from "./component/weddingSlider";
 import GuestBook from "./component/guestBook";
@@ -23,13 +21,14 @@ import FallingFlowers from "./component/fallingFlowers";
 
 export default function App() {
   return (
-    <div className="invitation">
+    <div style={{
+      backgroundColor: 'transparent',
+    }}>
       <FallingFlowers/>
       <HeaderView />
       <Introduce />
       <TimeLineSection />
       <TheBigDay />
-      <EventMap />
       <LoveJourney/>
       <WeddingSlider/>
       <GuestBook/>

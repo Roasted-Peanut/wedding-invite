@@ -36,7 +36,7 @@ Thời điểm đó, chúng mình đều đang độc thân. Huy ở Hải Phòn
   return (
     <section className="love-journey">
       <h2 className="love-title">Hành Trình Tình Yêu</h2>
-      <div className="timeline">
+      <div className="timeline-container">
         {timeline.map((item, index) => (
           <div
             key={index}
