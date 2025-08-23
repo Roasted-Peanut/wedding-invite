@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
+import { WEDDING_DATES, EVENT_LOCATIONS } from "../constants/weddingData";
+import { getTimeRemaining, formatTime, formatDate } from "../utils/helpers";
 
-export default function TheBigDay() {
-  const brideDate = new Date("2026-09-20T07:30:00").getTime();
-  const groomDate = new Date("2026-09-20T10:30:00").getTime();
+const TheBigDay = React.memo(() => {
+  const brideDate = useMemo(() => WEDDING_DATES.BRIDE_CEREMONY.getTime(), []);
+  const groomDate = useMemo(() => WEDDING_DATES.GROOM_CEREMONY.getTime(), []);
 
   const [brideCountdown, setBrideCountdown] = useState(
     getTimeRemaining(brideDate)
@@ -11,29 +13,17 @@ export default function TheBigDay() {
     getTimeRemaining(groomDate)
   );
 
-  function getTimeRemaining(targetDate) {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-
-    return { days, hours, minutes, seconds, expired: false };
-  }
+  const calculateTimeRemaining = useCallback((targetDate) => {
+    return getTimeRemaining(targetDate);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setBrideCountdown(getTimeRemaining(brideDate));
-      setGroomCountdown(getTimeRemaining(groomDate));
+      setBrideCountdown(calculateTimeRemaining(brideDate));
+      setGroomCountdown(calculateTimeRemaining(groomDate));
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [brideDate, groomDate, calculateTimeRemaining]);
 
   return (
     <section className="thebigday">
@@ -43,7 +33,9 @@ export default function TheBigDay() {
           {/* Cột trái - Nhà gái */}
           <div className="thebigday-col">
             <h2 className="thebigday-title">LỄ THÀNH HÔN</h2>
-            <p className="date-text">07:30 - 20/09/2026</p>
+            <p className="date-text">
+              {formatTime(WEDDING_DATES.BRIDE_CEREMONY)} - {formatDate(WEDDING_DATES.BRIDE_CEREMONY)}
+            </p>
             <div className="countdown">
               {brideCountdown.expired ? (
                 <span className="expired">Đã diễn ra</span>
@@ -73,7 +65,9 @@ export default function TheBigDay() {
           {/* Cột phải - Nhà trai */}
           <div className="thebigday-col">
             <h2 className="thebigday-title">LỄ VU QUY</h2>
-            <p className="date-text">10:30 - 20/09/2026</p>
+            <p className="date-text">
+              {formatTime(WEDDING_DATES.GROOM_CEREMONY)} - {formatDate(WEDDING_DATES.GROOM_CEREMONY)}
+            </p>
             <div className="countdown">
               {groomCountdown.expired ? (
                 <span className="expired">Đã diễn ra</span>
@@ -111,13 +105,11 @@ export default function TheBigDay() {
         <div className="event-container">
           {/* Nhà trai */}
           <div className="event-col">
-            <p className="event-address">
-              Tư gia nhà trai, 456 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh
-            </p>
+            <p className="event-address">{EVENT_LOCATIONS.GROOM.address}</p>
             <div className="event-map">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1328.5691732733314!2d105.8798757521265!3d20.718173871872988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135c9006b91e13b%3A0xffc6e8637f2e1c7!2zTmjDoCB2xINuIGhvw6EgdGjDtG4g4buobmcgQ-G7rQ!5e0!3m2!1svi!2s!4v1755502801120!5m2!1svi!2s"
+                src={EVENT_LOCATIONS.GROOM.mapUrl}
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -128,13 +120,11 @@ export default function TheBigDay() {
           </div>
           {/* Nhà gái */}
           <div className="event-col">
-            <p className="event-address">
-              Tư gia nhà gái, 123 Đường Hoa Mai, Quận Phú Nhuận, TP. Hồ Chí Minh
-            </p>
+            <p className="event-address">{EVENT_LOCATIONS.BRIDE.address}</p>
             <div className="event-map">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.302251765549!2d106.42828327613498!3d20.90015598071724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313585d23afcde1b%3A0xe5b7baddd3b52bae!2zMDk2IE5ndXnhu4VuIEjhuqNpIFRoYW5oLCBUVC4gVGhhbmggSMOgLCBUaGFuaCBIw6AsIEjhuqNpIETGsMahbmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1755503369215!5m2!1svi!2s"
+                src={EVENT_LOCATIONS.BRIDE.mapUrl}
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -147,4 +137,8 @@ export default function TheBigDay() {
       </div>
     </section>
   );
-}
+});
+
+TheBigDay.displayName = "TheBigDay";
+
+export default TheBigDay;

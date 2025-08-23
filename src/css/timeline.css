@@ -44,6 +44,8 @@
   gap: 8px;
   font-size: 20px;
   font-family: "emoji";
+  max-width: 1000px;
+  margin: auto;
 }
 
 @media (max-width: 600px) {

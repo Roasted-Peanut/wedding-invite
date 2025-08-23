@@ -1,31 +1,19 @@
+import React from "react";
 import "../css/index.css";
-export default function HeaderView() {
+
+const HeaderView = React.memo(() => {
   return (
     <section className="headerView">
-      <h2
-        style={{
-          fontFamily: "math",
-          textAlign: "center",
-        }}
-      >
-        SAVE THE DATE
-      </h2>
-      <h1
-        style={{
-          display: "flex",
-          flexWrap: "wrap", // cho phép xuống dòng
-          justifyContent: "center",
-          textAlign: "center",
-          gap: "5px", // khoảng cách giữa các span
-          color: '#e87a90',
-          fontFamily: 'fantasy',
-          fontWeight: 'bold'
-        }}
-      >
-        <span>CHÚ RỂ  </span>
+      <h2 className="header-title">SAVE THE DATE</h2>
+      <h1 className="header-couple">
+        <span>CHÚ RỂ</span>
         <span>❤️</span>
-        <span>  CÔ DÂU</span>
+        <span>CÔ DÂU</span>
       </h1>
     </section>
   );
-}
+});
+
+HeaderView.displayName = "HeaderView";
+
+export default HeaderView;

@@ -1,32 +1,51 @@
-export default function TimeLineSection() {
+import React from "react";
+import { MESSAGES, COUPLE_INFO } from "../constants/weddingData";
+
+const TimeLineSection = React.memo(() => {
   return (
     <section className="timeline">
-      <h2 className="timeline-title">Ngày này củng đã tới...!</h2>
+      <h2 className="timeline-title">{MESSAGES.TIMELINE_TITLE}</h2>
 
-      <p className="timeline-text">
-        Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt - Ngày
-        cưới của chúng mình. Chúng mình muốn gửi đến bạn những lời cảm ơn sâu
-        sắc nhất và để bạn biết rằng chúng mình rất hạnh phúc khi thấy bạn ở đó.
-        Cảm ơn các bạn rất nhiều vì sự hiện diện cùng những lời chúc tốt đẹp mà
-        bạn đã dành cho chúng mình nha!
-      </p>
-
-      <p className="timeline-names">Họ Và Tên Rể &amp; Họ Và Tên Dâu</p>
+      <p className="timeline-text">{MESSAGES.TIMELINE_TEXT}</p>
 
       <div className="timeline-parents">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <strong>Chú Rể: </strong>
+          <p className="timeline-names">{COUPLE_INFO.GROOM.name}</p>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <strong>Cô Dâu: </strong>
+          <p className="timeline-names"> {COUPLE_INFO.BRIDE.name}</p>
+        </div>{" "}
         <div>
-          <strong>Con ông:</strong> NGUYỄN ĐÌNH KIÊN
+          <strong>Con ông:</strong> {COUPLE_INFO.GROOM.father}
         </div>
         <div>
-          <strong>Con ông:</strong> VŨ THỊ HỒNG
+          <strong>Con ông:</strong> {COUPLE_INFO.BRIDE.father}
         </div>
         <div>
-          <strong>Con bà:</strong> NGUYỄN ĐÌNH KIÊN
+          <strong>Con bà:</strong> {COUPLE_INFO.GROOM.mother}
         </div>
         <div>
-          <strong>Con bà:</strong> VŨ THỊ HỒNG
+          <strong>Con bà:</strong> {COUPLE_INFO.BRIDE.mother}
         </div>
       </div>
     </section>
   );
-}
+});
+
+TimeLineSection.displayName = "TimeLineSection";
+
+export default TimeLineSection;

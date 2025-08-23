@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
+import { INTRO_IMAGES } from "../constants/weddingData";
 
-export default function Introduce() {
+const Introduce = React.memo(() => {
   const [showGroomInfo, setShowGroomInfo] = useState(false);
   const [showBrideInfo, setShowBrideInfo] = useState(false);
 
-  const handleKeyToggle = (e, setter) => {
+  const handleKeyToggle = useCallback((e, setter) => {
     // Enter hoặc Space toggle; Escape ẩn
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -12,7 +13,7 @@ export default function Introduce() {
     } else if (e.key === "Escape") {
       setter(false);
     }
-  };
+  }, []);
 
   return (
     <section className="intro">
@@ -28,7 +29,7 @@ export default function Introduce() {
         <div className="media">
           <img
             className={`media-img ${showGroomInfo ? "hidden" : ""}`}
-            src="https://png.pngtree.com/png-clipart/20240428/original/pngtree-cute-couple-cat-sleeping-and-licking-cartoon-png-image_14963738.png"
+            src={INTRO_IMAGES.GROOM}
             alt="Chú rể"
           />
           <div className={`media-overlay ${showGroomInfo ? "visible" : ""}`}>
@@ -52,7 +53,7 @@ export default function Introduce() {
         <div className="media">
           <img
             className={`media-img ${showBrideInfo ? "hidden" : ""}`}
-            src="https://png.pngtree.com/png-clipart/20240428/original/pngtree-cute-couple-cat-sleeping-and-licking-cartoon-png-image_14963738.png"
+            src={INTRO_IMAGES.BRIDE}
             alt="Cô dâu"
           />
           <div className={`media-overlay ${showBrideInfo ? "visible" : ""}`}>
@@ -65,4 +66,8 @@ export default function Introduce() {
       </div>
     </section>
   );
-}
+});
+
+Introduce.displayName = "Introduce";
+
+export default Introduce;

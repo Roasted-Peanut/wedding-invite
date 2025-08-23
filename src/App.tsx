@@ -1,8 +1,14 @@
 import React from "react";
 import HeaderView from "./component/headerView";
-import TimeLineSection from "./component/timeLine";
 import Introduce from "./component/introdue";
+import TimeLineSection from "./component/timeLine";
 import TheBigDay from "./component/theBigDay";
+import LoveJourney from "./component/loveJourney";
+import WeddingSlider from "./component/weddingSlider";
+import GuestBook from "./component/guestBook";
+import GiftBox from "./component/giftBox";
+import FallingFlowers from "./component/fallingFlowers";
+import { CONTACT_INFO, MESSAGES } from "./constants/weddingData";
 import "./css/header.css";
 import "./css/introduce.css";
 import "./css/thebigday.css";
@@ -12,12 +18,6 @@ import "./css/loveJourney.css";
 import "./css/weddingSlider.css";
 import "./css/guestBook.css";
 import "./css/giftBox.css";
-
-import LoveJourney from "./component/LoveJourney";
-import WeddingSlider from "./component/weddingSlider";
-import GuestBook from "./component/guestBook";
-import GiftBox from "./component/giftBox";
-import FallingFlowers from "./component/fallingFlowers";
 
 export default function App() {
   return (
@@ -33,15 +33,15 @@ export default function App() {
       <WeddingSlider/>
       <GuestBook/>
       <GiftBox/>
+      
       <section className="thanks">
-        <p>
-          Sự hiện diện của quý vị là niềm vinh hạnh lớn đối với gia đình chúng
-          tôi.
-        </p>
+        <p>{MESSAGES.THANKS}</p>
       </section>
 
       <footer>
-        <p>Liên hệ: 0909 123 456 (Chú rể) - 0912 345 678 (Cô dâu)</p>
+        <p>
+          Liên hệ: {CONTACT_INFO.GROOM.phone} ({CONTACT_INFO.GROOM.name}) - {CONTACT_INFO.BRIDE.phone} ({CONTACT_INFO.BRIDE.name})
+        </p>
       </footer>
     </div>
   );

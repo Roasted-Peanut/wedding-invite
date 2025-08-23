@@ -1,44 +1,45 @@
 import React from "react";
+import { GIFT_INFO } from "../constants/weddingData";
 
-const GiftBox = () => {
+// Component hiển thị thông tin mừng cưới
+const GiftBoxSection = React.memo(({ title, bank, name, account, qrSrc, altText }) => (
+  <div className="giftbox-section">
+    <h3>{title}</h3>
+    <p>
+      <strong>Ngân hàng:</strong> {bank}
+    </p>
+    <p>
+      <strong>Tên:</strong> {name}
+    </p>
+    <p>
+      <strong>STK:</strong> {account}
+    </p>
+    <img src={qrSrc} alt={altText} className="giftbox-qr" />
+  </div>
+));
+
+GiftBoxSection.displayName = "GiftBoxSection";
+
+// Component chính
+const GiftBox = React.memo(() => {
+
   return (
-    <div className="giftbox-container">
-      <h2 className="giftbox-title">🎁 Hộp mừng cưới</h2>
-      <p className="giftbox-description">
-        Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nha 🫶.
-        <br />
-        Cảm ơn bạn rất nhiều!
-      </p>
-
-      <div className="giftbox-columns">
-        {/* Chú rể */}
-        <div className="giftbox-section">
-          <h3>💙 Mừng cưới đến chú rể</h3>
-          <p><strong>Ngân hàng:</strong> Techcombank</p>
-          <p><strong>Tên:</strong> Chú Rể</p>
-          <p><strong>STK:</strong> 12349854060</p>
-          <img
-            src='src/assets/QRcode.jpg'
-            alt="QR Chú rể"
-            className="giftbox-qr"
-          />
-        </div>
-
-        {/* Cô dâu */}
-        <div className="giftbox-section">
-          <h3>💖 Mừng cưới đến cô dâu</h3>
-          <p><strong>Ngân hàng:</strong> Techcombank</p>
-          <p><strong>Tên:</strong> Cô Dâu</p>
-          <p><strong>STK:</strong> 12349854060</p>
-          <img
-            src="https://qrcode-gen.com/images/qrcode-default.png"
-            alt="QR Cô dâu"
-            className="giftbox-qr"
-          />
-        </div>
-      </div>
+    <div className="giftbox-columns">
+      {GIFT_INFO.map((data, index) => (
+        <GiftBoxSection
+          key={index}
+          title={data.title}
+          bank={data.bank}
+          name={data.name}
+          account={data.account}
+          qrSrc={data.qrSrc}
+          altText={data.altText}
+        />
+      ))}
     </div>
   );
-};
+});
+
+GiftBox.displayName = "GiftBox";
 
 export default GiftBox;

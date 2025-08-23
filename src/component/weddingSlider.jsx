@@ -1,32 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { WEDDING_IMAGES } from "../constants/weddingData";
 
-const images = [
-  "https://moonflowerhanoi.com/wp-content/uploads/2023/06/bo-hoa-cuoi-tulip-nu-cuoi-rang-ro.jpg",
-  "https://hoathangtu.com/wp-content/uploads/2022/12/IMG_8695-scaled.jpg",
-  "https://aodaitailoc.vn/wp-content/uploads/2025/04/Hoa-cuoi-cam-tay-co-dau-tulip-hong-mix-trang-cao-cap-V55.jpg",
-  "https://bizweb.dktcdn.net/thumb/large/100/326/588/products/bo-02-3-optimized.jpg?v=1618764088350",
-];
-
-export default function WeddingSlider() {
+const WeddingSlider = React.memo(() => {
   const [current, setCurrent] = useState(0);
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
-  };
+  const nextSlide = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % WEDDING_IMAGES.length);
+  }, []);
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  };
+  const prevSlide = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + WEDDING_IMAGES.length) % WEDDING_IMAGES.length);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 2000);
     return () => clearInterval(timer);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <div className="wedding-slider">
       <div className="slider-wrapper">
-        {images.map((src, index) => (
+        {WEDDING_IMAGES.map((src, index) => (
           <img
             key={index}
             src={src}
@@ -40,7 +34,7 @@ export default function WeddingSlider() {
       </div>
 
       <div className="dots">
-        {images.map((_, idx) => (
+        {WEDDING_IMAGES.map((_, idx) => (
           <span
             key={idx}
             className={`dot ${idx === current ? "active" : ""}`}
@@ -50,5 +44,9 @@ export default function WeddingSlider() {
       </div>
     </div>
   );
-}
+});
+
+WeddingSlider.displayName = "WeddingSlider";
+
+export default WeddingSlider;
 

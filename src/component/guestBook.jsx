@@ -1,25 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
+import { MESSAGES } from "../constants/weddingData";
 
-export default function GuestBook() {
+const GuestBook = React.memo(() => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) {
-      setError("Vui lòng nhập đầy đủ tên và lời chúc.");
+      setError(MESSAGES.GUESTBOOK_ERROR);
       return;
     }
     setError("");
-    alert(`Cảm ơn ${name}! Lời chúc của bạn đã được gửi.`);
+    alert(MESSAGES.GUESTBOOK_SUCCESS.replace("{name}", name));
     setName("");
     setMessage("");
-  };
+  }, [name, message]);
 
   return (
     <div className="guestbook-container">
-      <h2 className="guestbook-title">Sổ Lưu Bút</h2>
+      <h2 className="guestbook-title">{MESSAGES.GUESTBOOK_TITLE}</h2>
       <form onSubmit={handleSubmit} className="guestbook-form">
         <input
           type="text"
@@ -39,4 +40,8 @@ export default function GuestBook() {
       </form>
     </div>
   );
-}
+});
+
+GuestBook.displayName = "GuestBook";
+
+export default GuestBook;
