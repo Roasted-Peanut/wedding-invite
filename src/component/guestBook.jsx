@@ -6,17 +6,20 @@ const GuestBook = React.memo(() => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-    if (!name.trim() || !message.trim()) {
-      setError(MESSAGES.GUESTBOOK_ERROR);
-      return;
-    }
-    setError("");
-    alert(MESSAGES.GUESTBOOK_SUCCESS.replace("{name}", name));
-    setName("");
-    setMessage("");
-  }, [name, message]);
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (!name.trim() || !message.trim()) {
+        setError(MESSAGES.GUESTBOOK_ERROR);
+        return;
+      }
+      setError("");
+      alert(MESSAGES.GUESTBOOK_SUCCESS.replace("{name}", name));
+      setName("");
+      setMessage("");
+    },
+    [name, message]
+  );
 
   return (
     <div className="guestbook-container">

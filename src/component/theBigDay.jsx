@@ -17,6 +17,16 @@ const TheBigDay = React.memo(() => {
     return getTimeRemaining(targetDate);
   }, []);
 
+  const handleScrollToGuestbook = useCallback(() => {
+    const guestbookElement = document.querySelector(".guestbook-container");
+    if (guestbookElement) {
+      guestbookElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setBrideCountdown(calculateTimeRemaining(brideDate));
@@ -34,7 +44,8 @@ const TheBigDay = React.memo(() => {
           <div className="thebigday-col">
             <h2 className="thebigday-title">LỄ THÀNH HÔN</h2>
             <p className="date-text">
-              {formatTime(WEDDING_DATES.BRIDE_CEREMONY)} - {formatDate(WEDDING_DATES.BRIDE_CEREMONY)}
+              {formatTime(WEDDING_DATES.BRIDE_CEREMONY)} -{" "}
+              {formatDate(WEDDING_DATES.BRIDE_CEREMONY)}
             </p>
             <div className="countdown">
               {brideCountdown.expired ? (
@@ -66,7 +77,8 @@ const TheBigDay = React.memo(() => {
           <div className="thebigday-col">
             <h2 className="thebigday-title">LỄ VU QUY</h2>
             <p className="date-text">
-              {formatTime(WEDDING_DATES.GROOM_CEREMONY)} - {formatDate(WEDDING_DATES.GROOM_CEREMONY)}
+              {formatTime(WEDDING_DATES.GROOM_CEREMONY)} -{" "}
+              {formatDate(WEDDING_DATES.GROOM_CEREMONY)}
             </p>
             <div className="countdown">
               {groomCountdown.expired ? (
@@ -97,7 +109,9 @@ const TheBigDay = React.memo(() => {
 
         {/* Buttons */}
         <div className="thebigday-buttons">
-          <button className="btn-primary">Gửi lời chúc</button>
+          <button className="btn-primary" onClick={handleScrollToGuestbook}>
+            Gửi lời chúc
+          </button>
           <button className="btn-secondary">Xác nhận tham dự</button>
         </div>
 
