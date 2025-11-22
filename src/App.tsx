@@ -31,20 +31,25 @@ export default function App() {
   })
 
   useEffect(() => {
-    const playMusic = () => {
-      const audio = document.getElementById("backgroundMusic");
-      if (audio) {
-        audio?.play().catch((error: any) => {
-          // Nếu không thể play ngay, lắng nghe click đầu tiên
-          const handleClick = () => {
-            audio?.play();
-          };
-          document.addEventListener("click", handleClick, { once: true });
+    const audio = document.getElementById("backgroundMusic") as HTMLAudioElement | null;
+
+    const tryPlay = () => {
+      if (!audio) return;
+
+      audio.play().catch(() => {
+        // Nếu chưa thể play, thử các sự kiện tương tác khác
+        const handleInteraction = () => {
+          audio.play();
+        };
+
+        // Bắt sự kiện touchstart, scroll và click, chỉ một lần
+        ["click", "touchstart", "scroll"].forEach((event) => {
+          document.addEventListener(event, handleInteraction, { once: true });
         });
-      }
+      });
     };
 
-    playMusic();
+    tryPlay();
   }, []);
 
   return (
