@@ -30,11 +30,28 @@ export default function App() {
     }, 100);
   })
 
+  useEffect(() => {
+    const playMusic = () => {
+      const audio = document.getElementById("backgroundMusic");
+      if (audio) {
+        audio?.play().catch((error: any) => {
+          // Nếu không thể play ngay, lắng nghe click đầu tiên
+          const handleClick = () => {
+            audio?.play();
+          };
+          document.addEventListener("click", handleClick, { once: true });
+        });
+      }
+    };
+
+    playMusic();
+  }, []);
+
   return (
     <div style={{
       backgroundColor: 'transparent',
     }}>
-      <audio controls autoPlay hidden>
+      <audio controls autoPlay hidden id="backgroundMusic">
       <source src="src\assets\audios\I Do - 911.mp4" type="audio/mpeg" />
     </audio>
       <FallingFlowers />
