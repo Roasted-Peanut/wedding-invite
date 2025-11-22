@@ -120,7 +120,7 @@ export const INTRO_IMAGES = {
 export const MESSAGES = {
   THANKS:
     "Sự hiện diện của quý vị là niềm vinh hạnh lớn đối với gia đình chúng tôi.",
-  TIMELINE_TITLE: "Ngày này củng đã tới...!",
+  TIMELINE_TITLE: "Ngày này cũng đã tới...!",
   TIMELINE_TEXT:
     "Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt - Ngày cưới của chúng mình. Chúng mình muốn gửi đến bạn những lời cảm ơn sâu sắc nhất và để bạn biết rằng chúng mình rất hạnh phúc khi thấy bạn ở đó. Cảm ơn các bạn rất nhiều vì sự hiện diện cùng những lời chúc tốt đẹp mà bạn đã dành cho chúng mình nha!",
   LOVE_JOURNEY_TITLE: "Hành Trình Tình Yêu",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import HeaderView from "./component/headerView";
 import Introduce from "./component/introdue";
 import TimeLineSection from "./component/timeLine";
@@ -18,22 +18,36 @@ import "./css/loveJourney.css";
 import "./css/weddingSlider.css";
 import "./css/guestBook.css";
 import "./css/giftBox.css";
+import ReactPlayer from "react-player";
+
 
 export default function App() {
+  const playerRef = useRef(null);
+  const [muted, setmuted] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setmuted(false)
+    }, 100);
+  })
+
   return (
     <div style={{
       backgroundColor: 'transparent',
     }}>
-      <FallingFlowers/>
+      <audio controls autoPlay hidden>
+      <source src="src\assets\audios\I Do - 911.mp4" type="audio/mpeg" />
+    </audio>
+      <FallingFlowers />
       <HeaderView />
       <Introduce />
       <TimeLineSection />
       <TheBigDay />
-      <LoveJourney/>
-      <WeddingSlider/>
-      <GuestBook/>
-      <GiftBox/>
-      
+      <LoveJourney />
+      <WeddingSlider />
+      <GuestBook />
+      <GiftBox />
+
+
       <section className="thanks">
         <p>{MESSAGES.THANKS}</p>
       </section>
