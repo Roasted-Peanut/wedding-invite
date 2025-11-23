@@ -30,27 +30,22 @@ export default function App() {
     }, 100);
   })
 
-  useEffect(() => {
-    const audio = document.getElementById("backgroundMusic") as HTMLAudioElement | null;
+useEffect(() => {
+  const audio = document.getElementById("backgroundMusic") as HTMLAudioElement | null;
+  if (!audio) return;
 
-    const tryPlay = () => {
-      if (!audio) return;
+  const playAudio = () => {
+    audio.play().catch(() => {});
+  };
 
-      audio.play().catch(() => {
-        // Nếu chưa thể play, thử các sự kiện tương tác khác
-        const handleInteraction = () => {
-          audio.play();
-        };
+  // iOS: chỉ dùng touchstart hoặc click
+  document.addEventListener("touchstart", playAudio, { once: true });
+  document.addEventListener("click", playAudio, { once: true });
 
-        // Bắt sự kiện touchstart, scroll và click, chỉ một lần
-        ["click", "touchstart", "scroll"].forEach((event) => {
-          document.addEventListener(event, handleInteraction, { once: true });
-        });
-      });
-    };
+  // Android: scroll cũng cho phép
+  document.addEventListener("scroll", playAudio, { once: true });
 
-    tryPlay();
-  }, []);
+}, []);
 
   return (
     <div style={{
