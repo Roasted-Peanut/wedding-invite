@@ -1,28 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import FallingFlowers from "./component/fallingFlowers";
+import GiftBox from "./component/giftBox";
+import GuestBook from "./component/guestBook";
 import HeaderView from "./component/headerView";
 import Introduce from "./component/introdue";
-import TimeLineSection from "./component/timeLine";
-import TheBigDay from "./component/theBigDay";
 import LoveJourney from "./component/loveJourney";
+import TheBigDay from "./component/theBigDay";
+import TimeLineSection from "./component/timeLine";
 import WeddingSlider from "./component/weddingSlider";
-import GuestBook from "./component/guestBook";
-import GiftBox from "./component/giftBox";
-import FallingFlowers from "./component/fallingFlowers";
 import { CONTACT_INFO, MESSAGES } from "./constants/weddingData";
+import "./css/giftBox.css";
+import "./css/guestBook.css";
 import "./css/header.css";
+import "./css/index.css";
 import "./css/introduce.css";
+import "./css/loveJourney.css";
 import "./css/thebigday.css";
 import "./css/timeline.css";
-import "./css/index.css";
-import "./css/loveJourney.css";
 import "./css/weddingSlider.css";
-import "./css/guestBook.css";
-import "./css/giftBox.css";
-import ReactPlayer from "react-player";
-
 
 export default function App() {
-  const playerRef = useRef(null);
   const [muted, setmuted] = useState(true)
   useEffect(() => {
     setTimeout(() => {
@@ -30,30 +27,27 @@ export default function App() {
     }, 100);
   })
 
-useEffect(() => {
-  const audio = document.getElementById("backgroundMusic") as HTMLAudioElement | null;
-  if (!audio) return;
+  useEffect(() => {
+    const audio = document.getElementById("backgroundMusic") as HTMLAudioElement | null;
+    if (!audio) return;
 
-  const playAudio = () => {
-    audio.play().catch(() => {});
-  };
+    const playAudio = () => {
+      audio.play().catch(() => { });
+    };
 
-  // iOS: chỉ dùng touchstart hoặc click
-  document.addEventListener("touchstart", playAudio, { once: true });
-  document.addEventListener("click", playAudio, { once: true });
+    // iOS: chỉ dùng touchstart hoặc click
+    document.addEventListener("touchstart", playAudio, { once: true });
+    document.addEventListener("click", playAudio, { once: true });
 
-  // Android: scroll cũng cho phép
-  document.addEventListener("scroll", playAudio, { once: true });
+    // Android: scroll cũng cho phép
+    document.addEventListener("scroll", playAudio, { once: true });
 
-}, []);
+  }, []);
 
   return (
     <div style={{
       backgroundColor: 'transparent',
     }}>
-      <audio controls autoPlay hidden id="backgroundMusic">
-      <source src="src\assets\audios\I Do - 911.mp4" type="audio/mpeg" />
-    </audio>
       <FallingFlowers />
       <HeaderView />
       <Introduce />

@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { MESSAGES } from "../constants/weddingData";
+import { saveUserWish } from "../services/firestoreService";
 
 const GuestBook = React.memo(() => {
   const [name, setName] = useState("");
@@ -17,6 +18,7 @@ const GuestBook = React.memo(() => {
       alert(MESSAGES.GUESTBOOK_SUCCESS.replace("{name}", name));
       setName("");
       setMessage("");
+      saveUserWish('0353439858', name, message)
     },
     [name, message]
   );
