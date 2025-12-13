@@ -38,15 +38,6 @@
 //         <p>{MESSAGES.THANKS}</p>
 //       </section>
 
-//       <footer>
-//         <p>
-//           Liên hệ: {CONTACT_INFO.GROOM.phone} ({CONTACT_INFO.GROOM.name}) - {CONTACT_INFO.BRIDE.phone} ({CONTACT_INFO.BRIDE.name})
-//         </p>
-//       </footer>
-//     </div>
-//   );
-// }
-
 import "./css/app.css";
 import CoverSection from "./component/CoverSection";
 import CoupleSection from "./component/CoupleSection";

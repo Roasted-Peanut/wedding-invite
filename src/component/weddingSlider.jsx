@@ -31,8 +31,11 @@ const WeddingSlider = React.memo(() => {
 
         <button className="prev" onClick={prevSlide}>‹</button>
         <button className="next" onClick={nextSlide}>›</button>
-      </div>
 
+      </div>
+      <audio controls autoPlay id="backgroundMusic" loop>
+        <source src="IDo-911.mp4" type="audio/mp4" />
+      </audio>
       <div className="dots">
         {WEDDING_IMAGES.map((_, idx) => (
           <span
