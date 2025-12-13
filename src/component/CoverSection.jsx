@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 export default function CoverSection() {
   return (
     <section className="section" style={{}}>
-      <div style={{ maxWidth: 360 }}>
-        <motion.p
+      <div style={{ maxWidth: 360, overflow: "hidden" }}>
+        <motion.h2
           initial={{ opacity: 0, x: -120 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           style={{ letterSpacing: 2 }}
         >
           TRÂN TRỌNG KÍNH MỜI
-        </motion.p>
+        </motion.h2>
         {/* Tên cô dâu chú rể */}
-        <motion.h1
+        {/* <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.6 }}
@@ -36,7 +36,7 @@ export default function CoverSection() {
           style={{ margin: "0" }}
         >
           Hồng Gấm
-        </motion.h1>
+        </motion.h1> */}
 
         {/* Text từ phải */}
         <motion.p
@@ -44,11 +44,11 @@ export default function CoverSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          12 • 01 • 2026
+          Đến tham dự lễ thành hôn của chúng tôi
         </motion.p>
         {/* Ảnh từ dưới lên */}
         <motion.img
-          src="/wedding/031A7086.jpg"
+          src="./wedding/031A7086.jpg"
           alt="Wedding"
           initial={{ opacity: 0, y: 120 }}
           animate={{ opacity: 1, y: 0 }}

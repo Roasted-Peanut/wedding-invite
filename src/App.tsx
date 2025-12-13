@@ -21,22 +21,27 @@
 
 // export default function App() {
 //   return (
-//     <div style={{
-//       backgroundColor: 'transparent',
-//     }}>
-//       <FallingFlowers/>
+//     <div
+//       style={{
+//         backgroundColor: "transparent",
+//       }}
+//     >
+//       <FallingFlowers />
 //       <HeaderView />
 //       <Introduce />
 //       <TimeLineSection />
 //       <TheBigDay />
-//       <LoveJourney/>
-//       <WeddingSlider/>
-//       <GuestBook/>
-//       <GiftBox/>
-      
+//       <LoveJourney />
+//       <WeddingSlider />
+//       <GuestBook />
+//       <GiftBox />
+
 //       <section className="thanks">
 //         <p>{MESSAGES.THANKS}</p>
 //       </section>
+//     </div>
+//   );
+// }
 
 import "./css/app.css";
 import CoverSection from "./component/CoverSection";
@@ -44,8 +49,11 @@ import CoupleSection from "./component/CoupleSection";
 import EventSection from "./component/EventSection";
 import MusicPlayer from "./component/MusicPlayer";
 import React from "react";
+import ThreePhotoSection from "./component/ThreePhotoSection";
+import WishFormSection from "./component/WishFormSection";
+import { MESSAGES } from "./constants/weddingData";
 
-function App() {
+export default function App() {
   return (
     <>
       <MusicPlayer />
@@ -53,9 +61,10 @@ function App() {
         <CoverSection />
         <CoupleSection />
         <EventSection />
+        <ThreePhotoSection />
+        <WishFormSection />
+        
       </div>
     </>
   );
 }
-
-export default App;

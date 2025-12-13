@@ -1,12 +1,12 @@
-import { m, motion } from "framer-motion";
+import { delay, m, motion } from "framer-motion";
 
 export default function CoupleSection() {
   return (
     <section className="section">
       <div
         style={{
-                  maxWidth: 360,
-            overflow: "hidden"
+          maxWidth: 360,
+          overflow: "hidden",
         }}
       >
         <div
@@ -19,7 +19,7 @@ export default function CoupleSection() {
           <motion.div
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             style={{
               flex: 1,
               textAlign: "right",
@@ -32,9 +32,7 @@ export default function CoupleSection() {
             <p>
               <strong>Bà:</strong> Hoàng Thị Thư
             </p>
-            <p>
-              Nhà văn hoá thôn Ứng Cử, xã Chuyên Mỹ, huyện Phú Xuyên, TP Hà Nội
-            </p>
+            <p>Nhà văn hoá thôn Ứng Cử, xã Chuyên Mỹ, TP Hà Nội</p>
           </motion.div>
           <motion.div>
             <div style={{ width: 20 }}></div>
@@ -44,7 +42,7 @@ export default function CoupleSection() {
           <motion.div
             initial={{ opacity: 0, x: 120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             style={{
               flex: 1,
               textAlign: "left",
@@ -55,62 +53,70 @@ export default function CoupleSection() {
               <strong>Ông:</strong> Nguyễn Văn Bính
             </p>
             <p>
-              <strong>Bà:</strong> Nguyễn The
+              <strong>Bà:</strong> Nguyễn Thị The
             </p>
-            <p>096 Nguyễn Hải Thanh, xã Thanh Hà, TP Hải Dương</p>
+            <p>096 Nguyễn Hải Thanh, xã Thanh Hà, TP Hải Phòng</p>
           </motion.div>
         </div>
         <div>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1, delay: 0.3 }}
           >
             Trân Trọng Báo Tin Lễ Thành Hôn Của
           </motion.p>
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
-            style={{ textAlign: "left", margin: "0" }}
+            transition={{ duration: 1, delay: 0.3 }}
+            style={{
+              textAlign: "left",
+              margin: "0",
+              fontFamily: "fantasy",
+            }}
           >
             Văn Phụng
-          </motion.h2>
+          </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            style={{ margin: "0" }}
+            transition={{ duration: 1, delay: 0.3 }}
+            style={{ margin: "0", fontFamily: "fantasy" }}
           >
             &
           </motion.h2>
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, x: 120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
-            style={{ textAlign: "right", margin: "0" }}
+            transition={{ duration: 1, delay: 0.3 }}
+            style={{
+              textAlign: "right",
+              margin: "0",
+              fontFamily: "fantasy",
+            }}
           >
             Hồng Gấm
-          </motion.h2>
-          
+          </motion.h1>
+
           <motion.img
-            src="/wedding/031A6703.jpg"
-            alt="Wedding"
+            src="./wedding/031A7025.jpg"
+            alt="Wedding-cup"
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 1, delay: 0.3 }}
             style={{
               width: "100%",
               borderRadius: 16,
-              boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+              boxShadow: "rgb(246 246 246) 0px 10px 30px",
               marginTop: 16,
             }}
           />
           <motion.h2
             initial={{ opacity: 0, x: 120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
           >
             Save The Date
           </motion.h2>

@@ -125,6 +125,6 @@ export const MESSAGES = {
     "Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt - Ngày cưới của chúng mình. Chúng mình muốn gửi đến bạn những lời cảm ơn sâu sắc nhất và để bạn biết rằng chúng mình rất hạnh phúc khi thấy bạn ở đó. Cảm ơn các bạn rất nhiều vì sự hiện diện cùng những lời chúc tốt đẹp mà bạn đã dành cho chúng mình nha!",
   LOVE_JOURNEY_TITLE: "Hành Trình Tình Yêu",
   GUESTBOOK_TITLE: "Sổ Lưu Bút",
-  GUESTBOOK_ERROR: "✨ Hãy cho tụi mình biết tên hoặc biệt danh thường gọi để mọi người dễ nhận ra bạn nha. Nếu có kèm thêm lời chúc thì tụi mình sẽ rất vui và trân trọng điều đó!",
-  GUESTBOOK_SUCCESS: "Cảm ơn {name}! Lời chúc của bạn đã được gửi.",
+  GUESTBOOK_ERROR: "✨ Hãy cho tụi mình biết tên hoặc biệt danh thường gọi để nhận ra bạn nha. Nếu có kèm thêm lời chúc thì tụi mình sẽ rất vui và trân trọng điều đó!",
+  GUESTBOOK_SUCCESS: "Cảm ơn {name}! Đã gửi lời chúc đến chúng mình 💍.",
 };

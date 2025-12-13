@@ -1,17 +1,27 @@
-import { useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 export default function MusicPlayer() {
+  const [isPlay, setIsPlay] = useState(false);
   const audioRef = useRef();
+  useEffect(() => {
+    if (isPlay) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlay]);
 
   return (
-    <div style={{ position: "fixed", top: 16, right: 16, zIndex: 10 }}>
+    <div style={{ position: "fixed", bottom: 16, left: 16, zIndex: 10 }}>
       <button
-        onClick={() => audioRef.current.play()}
+        onClick={() => {
+          setIsPlay(!isPlay);
+        }}
       >
         🔊
       </button>
       <audio ref={audioRef} loop>
-        <source src="/music.mp3" type="audio/mpeg" />
+        <source src="CryOnMyShoulder.mp4" type="audio/mp4" loop />
       </audio>
     </div>
   );
