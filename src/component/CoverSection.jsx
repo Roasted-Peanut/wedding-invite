@@ -48,7 +48,7 @@ export default function CoverSection() {
         </motion.p>
         {/* Ảnh từ dưới lên */}
         <motion.img
-          src="..assets/wedding/031A7086.jpg"
+          src="/wedding/031A7086.jpg"
           alt="Wedding"
           initial={{ opacity: 0, y: 120 }}
           animate={{ opacity: 1, y: 0 }}

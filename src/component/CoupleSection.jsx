@@ -94,7 +94,7 @@ export default function CoupleSection() {
           </motion.h2>
           
           <motion.img
-            src="..assets/wedding/031A6703.jpg"
+            src="/wedding/031A6703.jpg"
             alt="Wedding"
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
