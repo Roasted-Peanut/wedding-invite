@@ -62,14 +62,14 @@ export default function CoupleSection() {
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
           >
             Trân Trọng Báo Tin Lễ Thành Hôn Của
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             style={{
               textAlign: "left",
               margin: "0",
@@ -81,7 +81,7 @@ export default function CoupleSection() {
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             style={{ margin: "0", fontFamily: "fantasy" }}
           >
             &
@@ -89,7 +89,7 @@ export default function CoupleSection() {
           <motion.h1
             initial={{ opacity: 0, x: 120 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             style={{
               textAlign: "right",
               margin: "0",
@@ -101,11 +101,12 @@ export default function CoupleSection() {
 
           <motion.img
             src="./wedding/031A7025.jpg"
+            loading="lazy"
             alt="Wedding-cup"
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             style={{
               width: "100%",
               borderRadius: 16,

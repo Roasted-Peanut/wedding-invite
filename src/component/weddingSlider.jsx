@@ -26,6 +26,7 @@ const WeddingSlider = React.memo(() => {
             src={src}
             alt={`slide-${index}`}
             className={`slide ${index === current ? "active" : ""}`}
+            loading="lazy"
           />
         ))}
 

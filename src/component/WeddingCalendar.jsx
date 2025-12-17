@@ -9,7 +9,7 @@ export default function WeddingCalendar() {
       style={styles.wrapper}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 1.5, ease: "easeOut" }}
       viewport={{ amount: 0.3, once: false }}
     >
       {/* Background */}
@@ -23,7 +23,7 @@ export default function WeddingCalendar() {
             style={styles.header}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 1 }}
             viewport={{ once: false }}
           >
             {["T2", "T3", "T4", "T5", "T6", "T7", "CN"].map((d) => (
@@ -57,14 +57,14 @@ export default function WeddingCalendar() {
                     hidden: { opacity: 0, scale: 0.8 },
                     visible: { opacity: 1, scale: 1 },
                   }}
-                  transition={{ duration: 0.25 }}
+                  transition={{ duration: 0.5 }}
                 >
                   {isWeddingDay ? (
                     <motion.span
                       style={styles.heart}
                       initial={{ scale: 0 }}
                       whileInView={{ scale: [0, 1.3, 1] }}
-                      transition={{ duration: 0.6 }}
+                      transition={{ duration: 1 }}
                       viewport={{ once: false }}
                     >
                       {day}

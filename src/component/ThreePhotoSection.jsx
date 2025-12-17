@@ -8,10 +8,11 @@ export default function ThreePhotoSection() {
         <motion.img
           src="./wedding/031A7329.jpg"
           alt="LEFT"
+          loading="lazy"
           style={styles.sideImage}
           initial={{ opacity: 0, x: 120 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          transition={{ duration: 1.5,  delay: 0.3 }}
           viewport={{ once: false, amount: 0.4 }}
         />
 
@@ -19,6 +20,7 @@ export default function ThreePhotoSection() {
         <motion.img
           src="./wedding/031A7424.jpg"
           alt="CENTER"
+          loading="lazy"
           style={styles.centerImage}
           initial={{ opacity: 0, scale: 0.85, filter: "blur(6px)" }}
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
@@ -30,10 +32,11 @@ export default function ThreePhotoSection() {
         <motion.img
           src="./wedding/031A7389.jpg"
           alt="RIGHT"
+          loading="lazy"
           style={styles.sideImage}
           initial={{ opacity: 0, x: -120 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          transition={{ duration: 1.5,  delay: 0.3 }}
           viewport={{ once: false, amount: 0.4 }}
         />
       </div>

@@ -44,6 +44,7 @@ export default function EventSection() {
                 <img
                   src="./wedding/031A7236.jpg"
                   alt="Bride"
+                  loading="lazy"
                   style={{
                     width: "100%",
                     borderRadius: 16,
@@ -121,11 +122,12 @@ export default function EventSection() {
               <motion.div
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
               >
                 <img
                   src="./wedding/031A7396.jpg"
                   alt="Groom"
+                  loading="lazy"
                   style={{
                     width: "100%",
                     borderRadius: 16,
@@ -141,7 +143,7 @@ export default function EventSection() {
               <motion.div
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
               >
                 {/* Thông tin */}
                 <div style={{ lineHeight: 1.8 }}>

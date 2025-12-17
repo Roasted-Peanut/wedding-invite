@@ -52,6 +52,7 @@ import React from "react";
 import ThreePhotoSection from "./component/ThreePhotoSection";
 import WishFormSection from "./component/WishFormSection";
 import { MESSAGES } from "./constants/weddingData";
+import WeddingAlbumSection from "./component/WeddingAlbumSection";
 
 export default function App() {
   return (
@@ -63,6 +64,7 @@ export default function App() {
         <EventSection />
         <ThreePhotoSection />
         <WishFormSection />
+        <WeddingAlbumSection/>
         
       </div>
     </>
