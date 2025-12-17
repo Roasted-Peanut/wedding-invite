@@ -8,11 +8,11 @@ export const WEDDING_DATES = {
 export const CONTACT_INFO = {
   GROOM: {
     name: "Chú rể",
-    phone: "0909 123 456",
+    phone: "0353439858",
   },
   BRIDE: {
     name: "Cô dâu",
-    phone: "0912 345 678",
+    phone: "0355361462",
   },
 };
 

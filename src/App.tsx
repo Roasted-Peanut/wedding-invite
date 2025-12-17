@@ -51,7 +51,7 @@ import MusicPlayer from "./component/MusicPlayer";
 import React from "react";
 import ThreePhotoSection from "./component/ThreePhotoSection";
 import WishFormSection from "./component/WishFormSection";
-import { MESSAGES } from "./constants/weddingData";
+import { CONTACT_INFO, MESSAGES } from "./constants/weddingData";
 import WeddingAlbumSection from "./component/WeddingAlbumSection";
 
 export default function App() {
@@ -64,9 +64,14 @@ export default function App() {
         <EventSection />
         <ThreePhotoSection />
         <WishFormSection />
-        <WeddingAlbumSection/>
+        <WeddingAlbumSection />
         
       </div>
+      <h3 style={{textAlign: 'center'}}>Rất vui khi được đón tiếp Quý Vị</h3>
+      <p style={{textAlign: 'center'}}>
+          {CONTACT_INFO.BRIDE.name}: {CONTACT_INFO.BRIDE.phone}{" "}
+          {CONTACT_INFO.GROOM.name}: {CONTACT_INFO.GROOM.phone}
+        </p>
     </>
   );
 }
