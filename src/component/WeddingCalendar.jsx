@@ -95,7 +95,7 @@ const styles = {
   bg: {
     position: "absolute",
     inset: 0,
-    backgroundImage: "url(./wedding/031A6703.jpg)",
+    backgroundImage: "url(./wedding/031A6703.webp)",
     backgroundSize: "cover",
     backgroundPosition: "center",
   },

@@ -23,33 +23,6 @@ export default function CoverSection() {
         >
           QUÝ VỊ
         </motion.h3>
-        {/* Tên cô dâu chú rể */}
-        {/* <motion.h1
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          style={{ margin: "0" }}
-        >
-          Văn Phụng
-        </motion.h1>
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          style={{ margin: "0" }}
-        >
-          ❤️
-        </motion.h1>
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          style={{ margin: "0" }}
-        >
-          Hồng Gấm
-        </motion.h1> */}
-
-        {/* Text từ phải */}
         <motion.p
           initial={{ opacity: 0, x: 120 }}
           animate={{ opacity: 1, x: 0 }}
@@ -59,7 +32,7 @@ export default function CoverSection() {
         </motion.p>
         {/* Ảnh từ dưới lên */}
         <motion.img
-          src="./wedding/031A7086.jpg"
+          src="./wedding/031A7086.webp"
           alt="Wedding"
           loading="lazy"
           initial={{ opacity: 0, y: 120 }}

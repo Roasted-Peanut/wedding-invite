@@ -6,7 +6,7 @@ export default function ThreePhotoSection() {
       <div style={styles.wrapper}>
         {/* LEFT */}
         <motion.img
-          src="./wedding/031A7329.jpg"
+          src="./wedding/031A7329.webp"
           alt="LEFT"
           loading="lazy"
           style={styles.sideImage}
@@ -18,7 +18,7 @@ export default function ThreePhotoSection() {
 
         {/* CENTER */}
         <motion.img
-          src="./wedding/031A7424.jpg"
+          src="./wedding/031A7424.webp"
           alt="CENTER"
           loading="lazy"
           style={styles.centerImage}
@@ -30,7 +30,7 @@ export default function ThreePhotoSection() {
 
         {/* RIGHT */}
         <motion.img
-          src="./wedding/031A7389.jpg"
+          src="./wedding/031A7389.webp"
           alt="RIGHT"
           loading="lazy"
           style={styles.sideImage}

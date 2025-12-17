@@ -4,21 +4,21 @@ import { ImageViewer } from "./ImageViewer";
 
 export default function WeddingAlbumSection() {
   const photos = [
-    "./wedding/031A6703.jpg",
-    "./wedding/031A6567.jpg",
-    "./wedding/031A6940.jpg",
-    "./wedding/031A7025.jpg",
-    "./wedding/031A7086.jpg",
-    "./wedding/031A7236.jpg",
-    "./wedding/031A7252.jpg",
-    "./wedding/031A7270.jpg",
-    "./wedding/031A7302.jpg",
-    "./wedding/031A7329.jpg",
-    "./wedding/031A7358.jpg",
-    "./wedding/031A7389.jpg",
-    "./wedding/031A7396.jpg",
-    "./wedding/031A7417.jpg",
-    "./wedding/031A7424.jpg",
+    "./wedding/031A6703.webp",
+    "./wedding/031A6567.webp",
+    "./wedding/031A6940.webp",
+    "./wedding/031A7025.webp",
+    "./wedding/031A7086.webp",
+    "./wedding/031A7236.webp",
+    "./wedding/031A7252.webp",
+    "./wedding/031A7270.webp",
+    "./wedding/031A7302.webp",
+    "./wedding/031A7329.webp",
+    "./wedding/031A7358.webp",
+    "./wedding/031A7389.webp",
+    "./wedding/031A7396.webp",
+    "./wedding/031A7417.webp",
+    "./wedding/031A7424.webp",
   ];
 
   const [active, setActive] = useState(null);

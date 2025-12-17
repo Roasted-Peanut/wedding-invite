@@ -42,7 +42,7 @@ export default function EventSection() {
                 transition={{ duration: 1.5, delay: 0.3 }}
               >
                 <img
-                  src="./wedding/031A7236.jpg"
+                  src="./wedding/031A7236.webp"
                   alt="Bride"
                   loading="lazy"
                   style={{
@@ -125,7 +125,7 @@ export default function EventSection() {
                 transition={{ duration: 1.5, delay: 0.3 }}
               >
                 <img
-                  src="./wedding/031A7396.jpg"
+                  src="./wedding/031A7396.webp"
                   alt="Groom"
                   loading="lazy"
                   style={{

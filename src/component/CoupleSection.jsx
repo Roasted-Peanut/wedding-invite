@@ -102,7 +102,7 @@ export default function CoupleSection() {
           </motion.h1>
 
           <motion.img
-            src="./wedding/031A7025.jpg"
+            src="./wedding/031A7025.webp"
             loading="lazy"
             alt="Wedding-cup"
             initial={{ opacity: 0, x: -120 }}
