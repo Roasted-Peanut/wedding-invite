@@ -73,7 +73,8 @@ export default function CoupleSection() {
             style={{
               textAlign: "left",
               margin: "0",
-              fontFamily: "fantasy",
+              fontFamily: "Arizonia",
+              fontSize: 48,
             }}
           >
             Văn Phụng
@@ -82,7 +83,7 @@ export default function CoupleSection() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.3 }}
-            style={{ margin: "0", fontFamily: "fantasy" }}
+            style={{ margin: "0", fontFamily: "Arizonia" }}
           >
             &
           </motion.h2>
@@ -93,7 +94,8 @@ export default function CoupleSection() {
             style={{
               textAlign: "right",
               margin: "0",
-              fontFamily: "fantasy",
+              fontFamily: "Arizonia",
+              fontSize: 48,
             }}
           >
             Hồng Gấm
