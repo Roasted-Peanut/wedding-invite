@@ -4,8 +4,8 @@ import { ImageViewer } from "./ImageViewer";
 
 export default function WeddingAlbumSection() {
   const photos = [
-    "./wedding/031A6567.jpg",
     "./wedding/031A6703.jpg",
+    "./wedding/031A6567.jpg",
     "./wedding/031A6940.jpg",
     "./wedding/031A7025.jpg",
     "./wedding/031A7086.jpg",
@@ -120,7 +120,7 @@ const styles = {
     witdh: "100%",
   },
   doubleImg: {
-    flex: 1,
+    width: 180,
     height: 250,
     objectFit: "cover",
     borderRadius: 14,

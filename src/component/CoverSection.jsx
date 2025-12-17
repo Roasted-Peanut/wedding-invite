@@ -15,6 +15,14 @@ export default function CoverSection() {
         >
           TRÂN TRỌNG KÍNH MỜI
         </motion.h2>
+        <motion.h3
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          style={{ letterSpacing: 2, color: "rgb(239 77 77)" }}
+        >
+          QUÝ VỊ
+        </motion.h3>
         {/* Tên cô dâu chú rể */}
         {/* <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
