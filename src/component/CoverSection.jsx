@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { WEDDING_IMAGES } from "../constants/weddingData";
 
 export default function CoverSection() {
   const [loaded, setLoaded] = useState(false);
@@ -32,7 +33,7 @@ export default function CoverSection() {
         </motion.p>
         {/* Ảnh từ dưới lên */}
         <motion.img
-          src="./wedding/031A7086.webp"
+          src={WEDDING_IMAGES[4]}
           alt="Wedding"
           loading="lazy"
           initial={{ opacity: 0, y: 120 }}

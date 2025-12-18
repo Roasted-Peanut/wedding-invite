@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { WEDDING_IMAGES } from "../constants/weddingData";
 
 export default function ThreePhotoSection() {
   return (
@@ -6,7 +7,7 @@ export default function ThreePhotoSection() {
       <div style={styles.wrapper}>
         {/* LEFT */}
         <motion.img
-          src="./wedding/031A7329.webp"
+          src={WEDDING_IMAGES[9]}
           alt="LEFT"
           loading="lazy"
           style={styles.sideImage}
@@ -18,7 +19,7 @@ export default function ThreePhotoSection() {
 
         {/* CENTER */}
         <motion.img
-          src="./wedding/031A7424.webp"
+          src={WEDDING_IMAGES[14]}
           alt="CENTER"
           loading="lazy"
           style={styles.centerImage}
@@ -30,7 +31,7 @@ export default function ThreePhotoSection() {
 
         {/* RIGHT */}
         <motion.img
-          src="./wedding/031A7389.webp"
+          src={WEDDING_IMAGES[11]}
           alt="RIGHT"
           loading="lazy"
           style={styles.sideImage}

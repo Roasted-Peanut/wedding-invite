@@ -81,13 +81,23 @@ Thời điểm đó, chúng mình đều đang độc thân. Huy ở Hải Phòn
 ];
 
 // Wedding slider images
-export const WEDDING_IMAGES = [
-  "https://moonflowerhanoi.com/wp-content/uploads/2023/06/bo-hoa-cuoi-tulip-nu-cuoi-rang-ro.jpg",
-  "https://hoathangtu.com/wp-content/uploads/2022/12/IMG_8695-scaled.jpg",
-  "https://aodaitailoc.vn/wp-content/uploads/2025/04/Hoa-cuoi-cam-tay-co-dau-tulip-hong-mix-trang-cao-cap-V55.jpg",
-  "https://bizweb.dktcdn.net/thumb/large/100/326/588/products/bo-02-3-optimized.jpg?v=1618764088350",
+export const WEDDING_IMAGES = [ 
+  "./wedding/031A6703.webp", // 0
+  "./wedding/031A6567.webp", // 1
+  "./wedding/031A6940.webp", // 2
+  "./wedding/031A7025.webp", // 3
+  "./wedding/031A7086.webp", // 4
+  "./wedding/031A7236.webp", // 5
+  "./wedding/031A7252.webp", // 6
+  "./wedding/031A7270.webp", // 7
+  "./wedding/031A7302.webp", // 8
+  "./wedding/031A7329.webp", // 9
+  "./wedding/031A7358.webp", // 10
+  "./wedding/031A7389.webp", // 11
+  "./wedding/031A7396.webp", // 12
+  "./wedding/031A7417.webp", // 13
+  "./wedding/031A7424.webp", // 14
 ];
-
 // Gift information
 export const GIFT_INFO = [
   {

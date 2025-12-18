@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { WEDDING_IMAGES } from "../constants/weddingData";
 
 export default function WeddingCalendar() {
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
@@ -95,7 +96,7 @@ const styles = {
   bg: {
     position: "absolute",
     inset: 0,
-    backgroundImage: "url(./wedding/031A6703.webp)",
+    backgroundImage: `url(${WEDDING_IMAGES[0]})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   },

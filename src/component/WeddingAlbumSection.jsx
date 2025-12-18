@@ -1,34 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ImageViewer } from "./ImageViewer";
+import { WEDDING_IMAGES } from "../constants/weddingData";
 
 export default function WeddingAlbumSection() {
-  const photos = [
-    "./wedding/031A6703.webp",
-    "./wedding/031A6567.webp",
-    "./wedding/031A6940.webp",
-    "./wedding/031A7025.webp",
-    "./wedding/031A7086.webp",
-    "./wedding/031A7236.webp",
-    "./wedding/031A7252.webp",
-    "./wedding/031A7270.webp",
-    "./wedding/031A7302.webp",
-    "./wedding/031A7329.webp",
-    "./wedding/031A7358.webp",
-    "./wedding/031A7389.webp",
-    "./wedding/031A7396.webp",
-    "./wedding/031A7417.webp",
-    "./wedding/031A7424.webp",
-  ];
 
   const [active, setActive] = useState(null);
 
   const blocks = [];
   let isDouble = true; // 2-1 xen kẽ
 
-  for (let i = 0; i < photos.length; ) {
+  for (let i = 0; i < WEDDING_IMAGES.length; ) {
     // ===== DOUBLE IMAGE BLOCK =====
-    if (isDouble && i + 1 < photos.length) {
+    if (isDouble && i + 1 < WEDDING_IMAGES.length) {
       const leftIndex = i;
       const rightIndex = i + 1;
 
@@ -36,7 +20,7 @@ export default function WeddingAlbumSection() {
         <div key={`double-${i}`} style={styles.double}>
           {/* LEFT */}
           <motion.img
-            src={photos[leftIndex]}
+            src={WEDDING_IMAGES[leftIndex]}
             loading="lazy"
             style={styles.doubleImg}
             onClick={() => setActive(leftIndex)}
@@ -47,7 +31,7 @@ export default function WeddingAlbumSection() {
 
           {/* RIGHT */}
           <motion.img
-            src={photos[rightIndex]}
+            src={WEDDING_IMAGES[rightIndex]}
             loading="lazy"
             style={styles.doubleImg}
             onClick={() => setActive(rightIndex)}
@@ -67,7 +51,7 @@ export default function WeddingAlbumSection() {
       blocks.push(
         <motion.img
           key={`single-${i}`}
-          src={photos[currentIndex]}
+          src={WEDDING_IMAGES[currentIndex]}
           loading="lazy"
           style={styles.singleImg}
           onClick={() => setActive(currentIndex)}
@@ -90,7 +74,7 @@ export default function WeddingAlbumSection() {
       <section className="section">
       <div style={styles.wrapper}>{blocks}</div>
       <ImageViewer
-        images={photos}
+        images={WEDDING_IMAGES}
         index={active}
         onClose={() => setActive(null)}
         onChange={setActive}

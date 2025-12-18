@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { a, g } from "framer-motion/client";
 import WeddingCalendar from "./WeddingCalendar";
-import { EVENT_LOCATIONS } from "../constants/weddingData";
+import { EVENT_LOCATIONS, WEDDING_IMAGES } from "../constants/weddingData";
 
 export default function EventSection() {
   return (
@@ -42,7 +42,7 @@ export default function EventSection() {
                 transition={{ duration: 1.5, delay: 0.3 }}
               >
                 <img
-                  src="./wedding/031A7236.webp"
+                  src={WEDDING_IMAGES[5]}
                   alt="Bride"
                   loading="lazy"
                   style={{
@@ -125,7 +125,7 @@ export default function EventSection() {
                 transition={{ duration: 1.5, delay: 0.3 }}
               >
                 <img
-                  src="./wedding/031A7396.webp"
+                  src={WEDDING_IMAGES[12]}
                   alt="Groom"
                   loading="lazy"
                   style={{

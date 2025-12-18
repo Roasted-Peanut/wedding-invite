@@ -1,4 +1,5 @@
 import { delay, m, motion } from "framer-motion";
+import { WEDDING_IMAGES } from "../constants/weddingData";
 
 export default function CoupleSection() {
   return (
@@ -102,7 +103,7 @@ export default function CoupleSection() {
           </motion.h1>
 
           <motion.img
-            src="./wedding/031A7025.webp"
+            src={WEDDING_IMAGES[3]}
             loading="lazy"
             alt="Wedding-cup"
             initial={{ opacity: 0, x: -120 }}
