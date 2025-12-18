@@ -49,13 +49,14 @@ const styles = {
   wrapper: {
     display: "flex",
     alignItems: "center",
-    gap: 8,
+    // gap: 8,
     maxWidth: 360,
     overflow: "hidden",
     marginTop: 24,
+    marginBottom: 24,
   },
   sideImage: {
-    width: 100,
+    width: 360/3,
     height: 170,
     objectFit: "cover",
     borderRadius: 12,
@@ -63,7 +64,7 @@ const styles = {
     opacity: 0.9,
   },
   centerImage: {
-    width: 120,
+    width: 360/3,
     height: 200,
     objectFit: "cover",
     borderRadius: 16,

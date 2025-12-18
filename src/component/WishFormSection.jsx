@@ -18,7 +18,12 @@ export default function WishFormSection() {
   };
 
   return (
-    <section className="section">
+    <section
+      className="section"
+      style={{
+        maxWidth: 360,
+      }}
+    >
       <motion.div
         style={styles.card}
         initial={{ opacity: 0, y: 40 }}
@@ -56,9 +61,9 @@ export default function WishFormSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.3 }}
-              />
-              
-              <motion.p
+        />
+
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -80,14 +85,10 @@ export default function WishFormSection() {
 }
 
 const styles = {
-  section: {
-    padding: "60px 0",
-    display: "flex",
-    justifyContent: "center",
-  },
   card: {
     maxWidth: 360,
-    padding: 20,
+    margin: "24px auto",
+    padding: 16,
     borderRadius: 16,
     background: "#fff",
     boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
@@ -96,19 +97,21 @@ const styles = {
     gap: 12,
   },
   input: {
+    maxWidth: 360,
+    boxSizing: "border-box",
     padding: "12px 14px",
     borderRadius: 10,
     border: "1px solid #ddd",
     fontSize: 14,
-    outline: "none",
   },
   textarea: {
+    maxWidth: 360,
+    boxSizing: "border-box",
     padding: "12px 14px",
     borderRadius: 10,
     border: "1px solid #ddd",
     fontSize: 14,
     resize: "none",
-    outline: "none",
   },
   button: {
     marginTop: 8,

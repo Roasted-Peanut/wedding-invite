@@ -1,6 +1,6 @@
 import TimeLineSection from "./component/timeLine";
-import "./css/timeline.css";
-import "./css/index.css";
+// import "./css/timeline.css";
+// import "./css/index.css";
 
 // export default function App() {
 //   return (
