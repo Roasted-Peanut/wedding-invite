@@ -27,11 +27,14 @@ import ThreePhotoSection from "./component/ThreePhotoSection";
 import WishFormSection from "./component/WishFormSection";
 import { CONTACT_INFO } from "./constants/weddingData";
 import WeddingAlbumSection from "./component/WeddingAlbumSection";
+import WishCarousel from "./component/WishCarousel";
 
 export default function App() {
+  const [list, setList] = React.useState(false);
   return (
     <>
       <MusicPlayer />
+      <WishCarousel  />
       <div className="app">
         <CoverSection />
         <CoupleSection />

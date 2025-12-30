@@ -1,6 +1,6 @@
 // firestoreService.js
 import { db } from "../firebase";
-import { collection, doc, setDoc, getDocs } from "firebase/firestore";
+import { collection, doc, setDoc, getDocs, query, orderBy, onSnapshot } from "firebase/firestore";
 
 /**
  * Ghi dữ liệu vào Firestore (insert/update theo số điện thoại)
@@ -42,3 +42,16 @@ export const getAllWishes = async () => {
         return [];
     }
 };
+
+export const listenWishes = (callback) => {
+  const q = query(
+    collection(db, "wishes"),
+    orderBy("createdAt", "asc")
+  );
+
+  return onSnapshot(q, (snapshot) => {
+    const list = snapshot.docs.map((doc) => doc.data());
+    callback(list);
+  });
+};
+
